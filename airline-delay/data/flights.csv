@@ -1,0 +1,120 @@
+Airline,Source,Destination,DepartureHour,DayOfWeek,Distance,Delayed
+IndiGo,Mumbai,Delhi,6,1,1150,0
+IndiGo,Mumbai,Delhi,8,1,1150,1
+IndiGo,Mumbai,Delhi,12,2,1150,0
+IndiGo,Mumbai,Delhi,18,3,1150,1
+IndiGo,Mumbai,Delhi,22,5,1150,0
+Air India,Delhi,Bangalore,7,1,1750,0
+Air India,Delhi,Bangalore,10,2,1750,1
+Air India,Delhi,Bangalore,14,3,1750,1
+Air India,Delhi,Bangalore,20,4,1750,0
+Air India,Delhi,Bangalore,23,6,1750,1
+Vistara,Bangalore,Chennai,6,1,350,0
+Vistara,Bangalore,Chennai,9,2,350,0
+Vistara,Bangalore,Chennai,13,3,350,1
+Vistara,Bangalore,Chennai,17,5,350,0
+Vistara,Bangalore,Chennai,21,6,350,1
+SpiceJet,Chennai,Hyderabad,5,1,630,0
+SpiceJet,Chennai,Hyderabad,11,2,630,1
+SpiceJet,Chennai,Hyderabad,16,4,630,0
+SpiceJet,Chennai,Hyderabad,19,5,630,1
+SpiceJet,Chennai,Hyderabad,23,6,630,0
+Akasa Air,Hyderabad,Kolkata,6,1,1180,0
+Akasa Air,Hyderabad,Kolkata,10,2,1180,0
+Akasa Air,Hyderabad,Kolkata,15,3,1180,1
+Akasa Air,Hyderabad,Kolkata,20,5,1180,1
+Akasa Air,Hyderabad,Kolkata,22,6,1180,0
+IndiGo,Kolkata,Pune,7,1,1650,0
+IndiGo,Kolkata,Pune,11,2,1650,1
+IndiGo,Kolkata,Pune,16,4,1650,0
+IndiGo,Kolkata,Pune,19,5,1650,1
+Air India,Pune,Jaipur,6,1,1150,0
+Air India,Pune,Jaipur,12,2,1150,0
+Air India,Pune,Jaipur,18,4,1150,1
+Vistara,Jaipur,Ahmedabad,8,1,680,0
+Vistara,Jaipur,Ahmedabad,14,3,680,0
+Vistara,Jaipur,Ahmedabad,19,5,680,1
+SpiceJet,Ahmedabad,Goa,7,2,1100,0
+SpiceJet,Ahmedabad,Goa,13,4,1100,0
+SpiceJet,Ahmedabad,Goa,17,6,1100,1
+Akasa Air,Goa,Mangalore,9,1,350,0
+Akasa Air,Goa,Mangalore,15,3,350,0
+Akasa Air,Goa,Mangalore,21,5,350,0
+IndiGo,Mangalore,Kochi,6,1,400,0
+IndiGo,Mangalore,Kochi,11,2,400,0
+IndiGo,Mangalore,Kochi,16,4,400,1
+Air India,Kochi,Trivandrum,8,1,220,0
+Air India,Kochi,Trivandrum,14,3,220,0
+Air India,Kochi,Trivandrum,19,5,220,0
+Vistara,Trivandrum,Coimbatore,7,1,570,0
+Vistara,Trivandrum,Coimbatore,12,2,570,0
+Vistara,Trivandrum,Coimbatore,18,4,570,1
+SpiceJet,Coimbatore,Madurai,9,1,420,0
+SpiceJet,Coimbatore,Madurai,15,3,420,0
+SpiceJet,Coimbatore,Madurai,20,5,420,0
+Akasa Air,Madurai,Tiruchirappalli,6,1,150,0
+Akasa Air,Madurai,Tiruchirappalli,11,2,150,0
+Akasa Air,Madurai,Tiruchirappalli,16,4,150,0
+IndiGo,Tiruchirappalli,Vijayawada,8,1,650,0
+IndiGo,Tiruchirappalli,Vijayawada,14,3,650,0
+IndiGo,Tiruchirappalli,Vijayawada,19,5,650,1
+Air India,Vijayawada,Visakhapatnam,7,1,350,0
+Air India,Vijayawada,Visakhapatnam,12,2,350,0
+Air India,Vijayawada,Visakhapatnam,17,4,350,0
+Vistara,Visakhapatnam,Bhubaneswar,9,1,530,0
+Vistara,Visakhapatnam,Bhubaneswar,15,3,530,0
+Vistara,Visakhapatnam,Bhubaneswar,20,5,530,1
+SpiceJet,Bhubaneswar,Ranchi,8,2,550,0
+SpiceJet,Bhubaneswar,Ranchi,14,4,550,0
+SpiceJet,Bhubaneswar,Ranchi,19,6,550,0
+Akasa Air,Ranchi,Patna,6,1,330,0
+Akasa Air,Ranchi,Patna,11,2,330,0
+Akasa Air,Ranchi,Patna,16,4,330,0
+IndiGo,Delhi,Chennai,6,1,2200,0
+IndiGo,Delhi,Chennai,10,2,2200,1
+IndiGo,Delhi,Chennai,15,3,2200,1
+IndiGo,Delhi,Chennai,21,5,2200,0
+Air India,Mumbai,Bangalore,5,1,840,0
+Air India,Mumbai,Bangalore,9,2,840,0
+Air India,Mumbai,Bangalore,14,4,840,1
+Air India,Mumbai,Bangalore,19,5,840,1
+Vistara,Mumbai,Chennai,7,1,1050,0
+Vistara,Mumbai,Chennai,12,2,1050,0
+Vistara,Mumbai,Chennai,17,4,1050,1
+Vistara,Mumbai,Chennai,22,6,1050,0
+SpiceJet,Mumbai,Hyderabad,8,1,700,0
+SpiceJet,Mumbai,Hyderabad,13,3,700,0
+SpiceJet,Mumbai,Hyderabad,18,5,700,0
+Akasa Air,Mumbai,Kolkata,6,2,1700,0
+Akasa Air,Mumbai,Kolkata,11,3,1700,1
+Akasa Air,Mumbai,Kolkata,16,5,1700,0
+IndiGo,Delhi,Mumbai,5,1,1150,0
+IndiGo,Delhi,Mumbai,11,2,1150,0
+IndiGo,Delhi,Mumbai,16,4,1150,1
+IndiGo,Delhi,Mumbai,21,6,1150,0
+Air India,Bangalore,Delhi,7,1,1750,0
+Air India,Bangalore,Delhi,12,2,1750,1
+Air India,Bangalore,Delhi,18,4,1750,1
+Vistara,Bangalore,Mumbai,6,1,840,0
+Vistara,Bangalore,Mumbai,11,2,840,0
+Vistara,Bangalore,Mumbai,16,4,840,0
+SpiceJet,Chennai,Delhi,8,1,2200,0
+SpiceJet,Chennai,Delhi,14,3,2200,1
+SpiceJet,Chennai,Delhi,19,5,2200,1
+Akasa Air,Hyderabad,Mumbai,7,1,700,0
+Akasa Air,Hyderabad,Mumbai,13,2,700,0
+Akasa Air,Hyderabad,Mumbai,18,4,700,0
+IndiGo,Kolkata,Mumbai,6,1,1700,0
+IndiGo,Kolkata,Mumbai,12,2,1700,0
+IndiGo,Kolkata,Mumbai,17,4,1700,1
+Air India,Pune,Delhi,8,1,1150,0
+Air India,Pune,Delhi,14,3,1150,0
+Air India,Pune,Delhi,19,5,1150,1
+Vistara,Jaipur,Delhi,9,2,240,0
+Vistara,Jaipur,Delhi,15,4,240,0
+SpiceJet,Ahmedabad,Delhi,7,1,780,0
+SpiceJet,Ahmedabad,Delhi,13,3,780,0
+SpiceJet,Ahmedabad,Delhi,18,5,780,0
+Akasa Air,Goa,Mumbai,10,2,420,0
+Akasa Air,Goa,Mumbai,16,4,420,0
+Akasa Air,Goa,Mumbai,21,6,420,0

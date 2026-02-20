@@ -1,0 +1,20 @@
+#=============================================================================
+# FLIGHT DELAY PREDICTION SYSTEM - DEPENDENCIES
+#=============================================================================
+# Install these packages using: pip install -r requirements.txt
+#=============================================================================
+
+# Web Framework
+flask>=2.3.0
+
+# Data Manipulation
+pandas>=1.5.0
+numpy>=1.23.0
+
+# Machine Learning
+scikit-learn>=1.1.0
+
+# Model Saving/Loading
+joblib>=1.2.0
+
+# (pickle is built-in, no need to install)

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Flight Delay Prediction</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/home">
+                ✈️ Flight Delay Prediction
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/predict">
+                            <i class="fas fa-plane"></i> Flight Details
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger text-white ms-2" href="/logout">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Project Overview -->
+        <div class="card">
+            <div class="card-header">
+                <h2>📚 About This Project</h2>
+            </div>
+            <div class="card-body">
+                <h4 class="mb-3">✈️ Flight Delay Prediction System</h4>
+                <p class="lead">
+                    A Machine Learning powered web application that predicts whether a flight will be delayed or arrive on time 
+                    based on various flight parameters.
+                </p>
+                <hr>
+                <h5 class="mt-4">🎯 Project Objectives</h5>
+                <ul>
+                    <li>Build a machine learning model to predict flight delays</li>
+                    <li>Create a user-friendly web interface using Flask</li>
+                    <li>Demonstrate end-to-end ML pipeline (data collection to deployment)</li>
+                    <li>Provide educational value for ML and Flask beginners</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Technologies Used -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>🛠️ Technologies Used</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5><i class="fab fa-python text-primary"></i> Python</h5>
+                                <p>Primary programming language for ML and backend logic</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5><i class="fas fa-flask text-warning"></i> Flask</h5>
+                                <p>Lightweight web framework for building the web application</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5><i class="fas fa-brain text-success"></i> Scikit-Learn</h5>
+                                <p>Machine Learning library for model training and prediction</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5><i class="fas fa-database text-info"></i> Pandas & NumPy</h5>
+                                <p>Data manipulation and preprocessing libraries</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5><i class="fab fa-html5 text-danger"></i> HTML5 & Bootstrap</h5>
+                                <p>Frontend markup and responsive styling</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5><i class="fas fa-file-code text-secondary"></i> CSS3</h5>
+                                <p>Custom styling for modern and clean UI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dataset Information -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>📊 Dataset Information</h3>
+            </div>
+            <div class="card-body">
+                <h5>Dataset Columns:</h5>
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Column Name</th>
+                            <th>Description</th>
+                            <th>Example Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Airline</td>
+                            <td>Name of the airline</td>
+                            <td>IndiGo, Air India, Vistara, SpiceJet, Akasa Air</td>
+                        </tr>
+                        <tr>
+                            <td>Source</td>
+                            <td>Departure city</td>
+                            <td>Mumbai, Delhi, Bangalore, Chennai, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Destination</td>
+                            <td>Arrival city</td>
+                            <td>Delhi, Bangalore, Chennai, Hyderabad, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>DepartureHour</td>
+                            <td>Hour of departure (24-hour format)</td>
+                            <td>0-23 (e.g., 6, 12, 18)</td>
+                        </tr>
+                        <tr>
+                            <td>DayOfWeek</td>
+                            <td>Day of the week</td>
+                            <td>1=Monday, 2=Tuesday, ..., 7=Sunday</td>
+                        </tr>
+                        <tr>
+                            <td>Distance</td>
+                            <td>Flight distance in kilometers</td>
+                            <td>150, 350, 840, 1150, 2200, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Delayed</td>
+                            <td>Target variable (0=On Time, 1=Delayed)</td>
+                            <td>0 or 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+  
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>✈️ Flight Delay Prediction System | Built with Flask & Machine Learning</p>
+        <p class="small">College Final Year Project</p>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

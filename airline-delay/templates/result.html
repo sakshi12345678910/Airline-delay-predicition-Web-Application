@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result - Flight Delay Prediction</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/home">
+                ✈️ Flight Delay Prediction
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/predict">
+                            <i class="fas fa-plane"></i> New Prediction
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger text-white ms-2" href="/logout">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mt-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                <li class="breadcrumb-item"><a href="/predict">Flight Details</a></li>
+                <li class="breadcrumb-item active">Result</li>
+            </ol>
+        </nav>
+
+        <!-- Result Card -->
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>🎯 Prediction Result</h2>
+            </div>
+            <div class="card-body">
+                <!-- Main Result -->
+                <div class="result-box {{ result_class }} text-white rounded mb-4">
+                    <h2 class="mb-3">{{ result }}</h2>
+                    <p class="confidence">
+                        <i class="fas fa-chart-line"></i> 
+                        Confidence: {{ confidence }}%
+                    </p>
+                </div>
+                
+                <!-- Flight Details Summary -->
+                <div class="card mb-4">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">
+                            <i class="fas fa-info-circle"></i> Flight Summary
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table table-borderless mb-0">
+                                    <tr>
+                                        <td><strong><i class="fas fa-plane-departure"></i> Airline:</strong></td>
+                                        <td>{{ airline }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><i class="fas fa-map-marker-alt"></i> Source:</strong></td>
+                                        <td>{{ source }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><i class="fas fa-map-marker-alt"></i> Destination:</strong></td>
+                                        <td>{{ destination }}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-borderless mb-0">
+                                    <tr>
+                                        <td><strong><i class="fas fa-clock"></i> Departure Hour:</strong></td>
+                                        <td>{{ hour }}:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><i class="fas fa-calendar-alt"></i> Day:</strong></td>
+                                        <td>
+                                            {% if day == 1 %}Monday
+                                            {% elif day == 2 %}Tuesday
+                                            {% elif day == 3 %}Wednesday
+                                            {% elif day == 4 %}Thursday
+                                            {% elif day == 5 %}Friday
+                                            {% elif day == 6 %}Saturday
+                                            {% elif day == 7 %}Sunday
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><i class="fas fa-ruler-horizontal"></i> Distance:</strong></td>
+                                        <td>{{ distance }} km</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="text-center">
+                    <a href="/predict" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-redo"></i> Check Another Flight
+                    </a>
+                    <a href="/home" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Information Card -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5>ℹ️ About the Prediction</h5>
+            </div>
+            <div class="card-body">
+                <p class="mb-3">
+                    This prediction is generated using a <strong>Random Forest Machine Learning model</strong> 
+                    trained on historical flight data. The model considers various factors including:
+                </p>
+                <ul>
+                    <li><strong>Airlines:</strong> Different airlines have different on-time performance records</li>
+                    <li><strong>Time of Day:</strong> Flights during peak hours may experience more delays</li>
+                    <li><strong>Day of Week:</strong> Weekends and Fridays may have different delay patterns</li>
+                    <li><strong>Route:</strong> Certain routes may have more traffic or operational challenges</li>
+                    <li><strong>Distance:</strong> Longer flights may have more variables affecting timing</li>
+                </ul>
+                <div class="alert alert-info mb-0">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <strong>Disclaimer:</strong> This prediction is for educational purposes only. 
+                    Actual flight delays can be affected by many factors not captured in this model.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>✈️ Flight Delay Prediction System | Built with Flask & Machine Learning</p>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
